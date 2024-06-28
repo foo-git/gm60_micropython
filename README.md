@@ -40,5 +40,9 @@ Binary: ['0b10001110']
 >>> scanner.set_register_settings(0x0015, 0x63)
 ```
 
+![Circuit diagram for GM60 and ESP32](https://github.com/foo-git/gm60_micropython/blob/main/docs/circuit.png?raw=true)
+
+![Photo of GM60 and ESP32 proof-of-concept build](https://github.com/foo-git/gm60_micropython/blob/main/docs/poc.jpg?raw=true)
+
 ## References
 See `docs/references.md` for other projects using the GM60 barcode scanner. Linked there also is the GM60 datasheet for future reference.
