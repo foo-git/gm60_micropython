@@ -32,7 +32,7 @@ See `example.py` for runnable commands.
 >>> scanner.reset_to_factory_defaults()
 
 
-# Prints register settings in hexadecimal and binary format for easier development, consult datasheet for details 
+# Prints register settings in hexadecimal and binary format for easier development
 >>> scanner.get_register_settings(0x0000)
 (['0x8e'], ['0b10001110'])
 
