@@ -23,13 +23,11 @@ class GM60_Driver:
     def reset_to_factory_defaults(self):
         """
         Resets the barcode scanner back to factory defaults
-
-        :return: Dict containing hardware revision, software version and date
         """
         data = 0x55
 
         self.set_register_settings(self.REG_RESET_FACTORY_SETTINGS, data)
-        time.sleep(1)  # wait some time to allow the sensor to settle
+        time.sleep(3)  # wait some time to allow the sensor to settle
 
     def get_version(self):
         """
