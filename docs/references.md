@@ -1,7 +1,7 @@
 # Information collection
 
 ## Barcode reader: GM60
-* User manual (PDF)
+* Datasheet, see user manual (PDF)
 * dfrobot wiki: https://wiki.dfrobot.com/SKU_SEN0486_Gravity_Ring_2D_QR_Code_Scanner
 
 ### Interfaces
@@ -21,4 +21,4 @@
 * https://github.com/agronaut/SC16IS752-micropython-library
 
 ## Firmware
-ESP32_GENERIC-20240602-v1.23.0.bin
+During development, ESP32_GENERIC-20240602-v1.23.0.bin was used on the chip.
