@@ -17,7 +17,7 @@ See `example.py` for runnable commands.
 
 
 # Initialize UART connection to GM60 barcode scanner
-  # UART port/naming hint:
+    # UART port/naming hint:
     # GM60 RX (green cable) needs to be connected to ESP32 TX (e.g. here pin 25)
     # GM60 TX (yellow cable) needs to be connected to ESP32 RX (e.g. here pin 26)
 >>> scanner = GM60_Driver(rx=26, tx=25)
@@ -42,6 +42,10 @@ See `example.py` for runnable commands.
 
 # Set LED to maximum brightness
 >>> scanner.set_register_settings(0x0015, 0x63)
+
+# Read barcode from sensor
+>>> scanner.read_barcode()
+'4066447241358'
 ```
 
 ![Circuit diagram for GM60 and ESP32](https://github.com/foo-git/gm60_micropython/blob/main/docs/circuit.png?raw=true)

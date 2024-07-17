@@ -1,3 +1,4 @@
+import time
 from gm60_micropython import GM60_Driver
 
 # UART port/naming hint:
@@ -16,3 +17,13 @@ print(scanner.get_register_settings(0x0000, 3))  # reads three registers at once
 scanner.set_register_settings(0x0000, 0b10001110)  # set LED always on
 
 scanner.set_register_settings(0x0015, 0x63)  # set LED to maximum brightness
+
+# get read barcode data from sensor
+print('Waiting for a successful barcode reading from sensor...')
+while True:
+    response = scanner.read_sensor()
+    if response:
+        print(response)
+        break
+    else:
+        time.sleep_ms(50)
