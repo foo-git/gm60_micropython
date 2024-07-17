@@ -66,9 +66,18 @@ class GM60_Driver:
         return data, data_bin
 
     def read_sensor(self):
-        response = self._serialport.readline()
+        """
+        Reads barcode sensor output as long as there is data left to be read.
 
-        return response
+        :return: String containing the read barcode, or empty list if no data was available.
+        """
+        response = []
+        while self._serialport.any():
+            response.append(self._serialport.read())
+            time.sleep_ms(5)
+        else:
+            if response:
+                return b''.join(response).decode('utf-8')
 
     def _read_register(self, register_address_start, register_read_amount=1):
         """
